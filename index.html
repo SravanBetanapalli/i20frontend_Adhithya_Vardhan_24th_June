@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I2O Cloud Platform</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      // darkMode: 'class', // Dark mode removed
+      theme: {
+        extend: {
+          colors: {
+            primary: { // Blue (Day Mode becomes default)
+              "50":"#eff6ff",
+              "100":"#dbeafe",
+              "200":"#bfdbfe",
+              "300":"#93c5fd",
+              "400":"#60a5fa", 
+              "500":"#3b82f6", 
+              "600":"#2563eb", 
+              "700":"#1d4ed8",
+              "800":"#1e40af",
+              "900":"#1e3a8a", 
+              "950":"#172554"
+            },
+            accent: { // Amber/Orange (Day Mode becomes default)
+              "50": "#fffbeb",
+              "100": "#fef3c7",
+              "200": "#fde68a",
+              "300": "#fcd34d", 
+              "400": "#fbbf24", 
+              "500": "#f59e0b", 
+              "600": "#d97706", 
+              "700": "#b45309",
+              "800": "#92400e",
+              "900": "#78350f",
+              "950": "#451a03"
+            },
+            success: {
+              light: '#D1FAE5', // bg-green-100
+              DEFAULT: '#10B981', // text-green-500/600
+              dark: '#065F46', // for consistency, but will not be used with dark: prefix
+              textLight: '#065F46', // text-green-700
+              textDark: '#A7F3D0' // for consistency
+            },
+            error: {
+              light: '#FEE2E2', // bg-red-100
+              DEFAULT: '#EF4444', // text-red-500/600
+              dark: '#991B1B',  
+              textLight: '#B91C1C', // text-red-700
+              textDark: '#FECACA' 
+            },
+            warning: { 
+              light: '#FFFBEB', // bg-amber-100
+              DEFAULT: '#F59E0B', // text-amber-500/600
+              dark: '#92400E', 
+              textLight: '#B45309', // text-amber-700
+              textDark: '#FDE68A' 
+            },
+            info: { 
+              light: '#EFF6FF', // bg-blue-50
+              DEFAULT: '#3B82F6', // text-blue-500/600
+              dark: '#1E40AF', 
+              textLight: '#1D4ED8', // text-blue-700
+              textDark: '#BFDBFE' 
+            }
+          },
+          animation: {
+            'spin-slow': 'spin 12s linear infinite',
+          }
+        }
+      }
+    }
+  </script>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.1.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.6.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "recharts": "https://esm.sh/recharts@^2.15.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-gray-100 transition-colors duration-300">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
